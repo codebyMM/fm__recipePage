@@ -1,0 +1,176 @@
+/*================== GOOGLE FONTS ==================*/
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+/*================== CSS VARIABLES ==================*/
+:root {
+    /* Fonts */
+    --young-serif: "Young Serif", serif;
+    --outfit: "Outfit", sans-serif;
+    /* Colors */
+    --white: hsl(0, 0%, 100%);
+    --stone-100: hsl(30, 54%, 90%);
+    --stone-150: hsl(30, 18%, 87%);
+    --stone-600: hsl(30, 10%, 34%);
+    --stone-900: hsl(24, 5%, 18%);
+    --brown-800: hsl(14, 45%, 36%);
+    --rose-800: hsl(332, 51%, 32%);
+    --rose-50: hsl(330, 100%, 98%);
+    /* Font Weight */
+    --fw-400: 400;
+    --fw-600: 600;
+    --fw-700: 700;
+}
+/*================== UTILITIES ==================*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+p {
+    font-size: 1em;
+}
+/*================== BODY ==================*/
+body {
+    background: var(--stone-100);
+    font-family: var(--outfit);
+    color: var(--stone-600);
+}
+/*================== MAIN ==================*/
+main {
+    background: var(--white);
+    max-width: 725px;
+    margin: 8rem auto;
+    border-radius: 20px;
+    padding-bottom: 1rem;
+}
+/*================== SECTION HEADER ==================*/
+section.header {
+    padding: 2rem 2rem 1rem;
+}
+.img-header {
+    display: block;
+    width: 100%;
+    border-radius: 10px;
+}
+.recipe-title {
+    font-family: var(--young-serif);
+    font-size: 2.5rem;
+    margin: 2rem 0 .8rem;
+    color: var(--stone-900);
+    font-weight: var(--fw-500);
+}
+.preparation-time {
+    max-width: 100%;
+    padding: 1.2rem 1.7rem;
+    background: var(--rose-50);
+    margin: 1.5rem 0 0 0;
+    border-radius: 8px;
+}
+.preparation-time h3 {
+    color: var(--rose-800);
+    margin-bottom: .5rem;
+}
+.preparation-time ul {
+    margin-left: 26px;
+}
+.preparation-time ul li {
+    margin: .8rem 0;
+    padding: 0 1rem;
+}
+.preparation-time ul li span,
+article ol li span {
+    font-weight: var(--fw-700);
+}
+/*================== SECTION ARTICLES ==================*/
+section.articles {
+    padding: 0 2rem;
+}
+section.articles article {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--stone-100);
+}
+section.articles article:first-of-type{
+    padding-top: 1rem;
+}
+.article-title {
+    font-family: var(--young-serif);
+    font-weight: var(--fw-400);
+    color: var(--brown-800);
+    font-size: 2em;
+    margin-bottom: 1rem;
+}
+article ul,
+article ol {
+    padding-left: 1.7rem;
+}
+article li::marker{
+    color: var(--brown-800);
+    font-weight: var(--fw-700);
+}
+article > ul li,
+article > ol li {
+    padding-left: .7rem;
+    margin-bottom: .8rem;
+}
+article table {
+    margin-top: 1.5rem;
+    width: 100%;
+    text-align: left;
+}
+article table th,
+article table td {
+    border-bottom: 1px solid var(--stone-100);
+    padding: .8rem 0;
+    width: 50%;
+    font-weight: var(--fw-700);
+    color: var(--brown-800);
+}
+article table tr:last-of-type th,
+article table tr:last-of-type td {
+    border: none;
+}
+article table th {
+    padding-left: 1.8rem;
+    font-weight: var(--fw-400);
+    color: inherit;
+}
+section.articles article:last-of-type {
+    border: none;
+}
+/*================== MOBILE ==================*/
+@media only screen and (max-width: 768px) {
+    main {
+        max-width: 100%;
+        margin: 0;
+        border-radius: 0;
+    }
+    section.header {
+        padding: 0 0 1rem 0;
+    }
+    section.header .recipe-title,
+    section.header p,
+    section.header .preparation-time{
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+    .img-header {
+        border-radius: 0;
+    }
+    .recipe-title {
+        font-size: 2.125em;
+    }
+    .preparation-time {
+        padding: 1.2rem 1rem;
+        border-radius: 10px;
+    }
+    .preparation-time ul {
+        margin-left: 30px;
+    }
+    .preparation-time ul li {
+        margin: .8rem 0;
+        padding: 0 1rem;
+    }
+}
